@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+    <rect width="100%" height="100%" fill="#ffffff"/>
+    <g transform="translate(100,50)">
+        <path d="M150,80 L250,80 L270,120 L130,120 Z" fill="#2D4966"/>
+        <path d="M140,120 L260,120 L260,160 L140,160 Z" fill="#4D4D4D"/>
+        <rect x="180" y="70" width="40" height="10" fill="#28a745"/>
+        <circle cx="165" cy="140" r="5" fill="#f10f0f"/>
+        <circle cx="200" cy="140" r="5" fill="#00ff00"/>
+        <circle cx="235" cy="140" r="5" fill="#0000ff"/>
+    </g>
+    <text x="250" y="250" text-anchor="middle" font-family="Arial" font-size="24" fill="#2D4966">ASUS RT-AX82U</text>
+</svg>

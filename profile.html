@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - شركة قيقا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="profile-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span>قيقا</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="packages.html">باقات الإنترنت</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li class="user-menu">
+                <img src="images/default-avatar.png" alt="صورة المستخدم" class="user-avatar">
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> الملف الشخصي</a>
+                    <a href="balance.html"><i class="fas fa-wallet"></i> الرصيد</a>
+                    <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="images/default-avatar.png" alt="صورة المستخدم" id="profileImage">
+                <div class="avatar-controls">
+                    <button class="change-avatar-btn" onclick="openImageOptions()"><i class="fas fa-camera"></i></button>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h2 id="userName">اسم المستخدم</h2>
+                <p id="userEmail">user@example.com</p>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-section">
+                <h3>معلومات الحساب</h3>
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" id="fullName">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" id="email">
+                    </div>
+                    <button type="submit" class="btn">حفظ التغييرات</button>
+                </form>
+            </div>
+
+            <div class="profile-section">
+                <h3>الرصيد والاشتراكات</h3>
+                <div class="balance-info">
+                    <div class="balance-amount">
+                        <span>الرصيد الحالي:</span>
+                        <h4 id="currentBalance">0.00 د.ل</h4>
+                    </div>
+                    <button class="btn" onclick="window.location.href='balance.html'">شحن الرصيد</button>
+                </div>
+                <div class="subscription-info">
+                    <h4>الاشتراك الحالي</h4>
+                    <p id="currentPlan">لا يوجد اشتراك نشط</p>
+                    <p id="expiryDate"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Upload Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeImageModal()">&times;</span>
+            <h3>تغيير الصورة الشخصية</h3>
+            <div class="image-options">
+                <div class="option">
+                    <label for="imageUpload" class="upload-btn">
+                        <i class="fas fa-upload"></i>
+                        <span>اختيار صورة من الجهاز</span>
+                    </label>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                </div>
+                <div class="option">
+                    <button onclick="startCamera()" class="camera-btn">
+                        <i class="fas fa-camera"></i>
+                        <span>التقاط صورة جديدة</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Camera Preview -->
+            <div id="cameraPreview" style="display: none;">
+                <video id="video" autoplay playsinline style="display: none;"></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="camera-controls">
+                    <button onclick="capturePhoto()" class="capture-btn">
+                        <i class="fas fa-camera"></i> التقاط
+                    </button>
+                    <button onclick="stopCamera()" class="stop-btn">
+                        <i class="fas fa-times"></i> إلغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

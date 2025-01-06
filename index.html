@@ -3,61 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر الإلكتروني</title>
-    <link rel="stylesheet" href="style.css">
+    <title>شركة قيقا لخدمات الإنترنت</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="https://cdn.discordapp.com/attachments/1218265466573950989/1325221421504401418/101.png?ex=677b0020&is=6779aea0&hm=2881902e38afea521172f489de46212e967f709e089bc2db8666e3595570945b&" alt="شعار المتجر">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="products.html">المنتجات</a></li>
-                <li><a href="support.html">الدعم</a></li>
-            </ul>
-        </nav>
+<body class="home-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span>قيقا</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="packages.html">باقات الإنترنت</a></li>
+            <li><a href="support.html">الدعم الفني</a></li>
+            <li class="user-menu">
+                <img src="images/default-avatar.png" alt="صورة المستخدم" class="user-avatar">
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> الملف الشخصي</a>
+                    <a href="balance.html"><i class="fas fa-wallet"></i> الرصيد</a>
+                    <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>مرحباً بكم في شركة قيقا</h1>
+        <p>نقدم أفضل خدمات الإنترنت بأسعار تنافسية</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>مرحباً بكم في Shop MG </h1>
-            <p>اكتشف أفضل المنتجات بأسعار مميزة</p>
-            <p>🛠️يمكنك طلب ملفات وسكربتات حسب طلبك عبر صفحة الدعم📢</p>
-        </section>
-
-        <section class="featured-products">
-            <h2>سكربتات FiveM</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8EJLjOu8TAbYP9caGJBOZgrfm89yEZZUqL0XG0C5fPEq3C-BlndG7ZzCmOYXo1vI-Asc&usqp=CAU" alt="منتج 1">
-                    <h3>ملفات وظائف</h3>
-                    <p>120 دولار</p>
-                    <button>أضف إلى السلة</button>
-                </div>
-                <div class="product-card">
-                    <img src="data:image/jpeg;base64,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" alt="منتج 2">
-                    <h3>ملفات رسبكت </h3>
-                    <p>560 دولار</p>
-                    <button>أضف إلى السلة</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://i.ytimg.com/vi/uQjp5e0-jp4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBsqVCynRqCbsCKtJ7L2wIrlz3GAw" alt="منتج 3">
-                    <h3>سكربتات حقيبة ومنيو ووظائف</h3>
-                    <p>350 دولار</p>
-                    <button>أضف إلى السلة</button>
-                </div>
+    <!-- Detailed Packages Section -->
+    <section class="packages">
+        <h2>باقاتنا المتوفرة</h2>
+        <div class="packages-grid">
+            <div class="package">
+                <div class="featured-label">قيمنق</div>
+                <img src="https://giga.ly/ltd/wp-content/uploads/2024/06/329832_1.webp" alt=" Totolink X5000R | WiFi Router | WiFi6 AX1800 Dual Band, 5x RJ45 1000Mb/s" class="package-image">
+                <h3>Totolink X5000R | WiFi Router | WiFi6 AX1800 Dual Band, 5x RJ45 1000Mb/s</h3>
+                <div class="price">$ 37.11</div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> ماركة Totolink</li>
+                    <li><i class="fas fa-check"></i> كود المنتجX5000R</li>
+                    <li><i class="fas fa-check"></i> فئات Accessories</li>
+                </ul>
+                <button class="btn" data-package="basic">اشترك الآن</button>
             </div>
-        </section>
-    </main>
 
+            <div class="package featured">
+                <div class="featured-label">افضل منتجنا</div>
+                <img src="https://giga.ly/ltd/wp-content/uploads/2024/06/af-5g30-s45.jpg" alt="Ubiquiti AF-5G30-S45 | Directional antenna | airFiber Dish, 5GHz, 30dBi" class="package-image">
+                <h3>Ubiquiti AF-5G30-S45 | Directional antenna | airFiber Dish, 5GHz, 30dBi</h3>
+                <div class="price">$ 120.75</div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> ماركة Ubiquiti</li>
+                    <li><i class="fas fa-check"></i> كود المنتج AF-5G30-S45</li>
+                    <li><i class="fas fa-check"></i> فئات UISP/Antennas</li>
+                </ul>
+                <button class="btn" data-package="pro">اشترك الآن</button>
+            </div>
+
+            <div class="package">
+                <img src="https://giga.ly/ltd/wp-content/uploads/2024/06/gigavv-01-1000x938.webp" alt="Ubiquiti AG-HP-5G27 | CPE | airGrid, 2,4GHz, 5GHz, 1x RJ45 100Mb/s, 27dBi" class="package-image">
+                <h3>Ubiquiti AG-HP-5G27 | CPE | airGrid, 2,4GHz, 5GHz, 1x RJ45 100Mb/s, 27dBi </h3>
+                <div class="price">$ 72.45</div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> ماركة Ubiquiti</li>
+                    <li><i class="fas fa-check"></i> كود المنتج AG-HP-5G27</li>
+                    <li><i class="fas fa-check"></i> فئات UISP/Antennas</li>
+                </ul>
+                <button class="btn" data-package="ultimate">اشترك الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internet Devices Section -->
+    <section class="devices">
+        <h2>أجهزة الإنترنت</h2>
+        <div class="devices-grid">
+            <div class="device-card">
+                <img src="https://cdn.discordapp.com/attachments/1218265466573950989/1325647571791904879/110c093a-2a96-4b92-859f-39e67caad0dd.jpg?ex=677c8d02&is=677b3b82&hm=a4ed4151be50dea1b31927979c92a73678acef3cffd7fe51cec061cee3ac743a&" alt="راوتر">
+                <h3>راوتر TP-Link</h3>
+                <p>راوتر عالي الأداء مع تغطية واسعة</p>
+                <div class="price">200 د.ل</div>
+                <button class="btn">اطلب الآن</button>
+            </div>
+            <div class="device-card">
+                <img src="data:image/jpeg;base64,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" alt="راوتر">
+                <h3>راوتر ASUS</h3>
+                <p>راوتر احترافي للألعاب والبث</p>
+                <div class="price">300 د.ل</div>
+                <button class="btn">اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>جميع الحقوق محفوظة © Sohp MG 2025</p>
+            <div class="footer-section">
+                <h3>تواصل معنا <span class="glow-text">Ghazwan-MG</span></h3>
+                <p><i class="fas fa-phone"></i> 0911234567</p>
+                <p><i class="fas fa-envelope"></i> info@giga.ly</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100070897124291" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 شركة قيقا لخدمات الإنترنت. جميع الحقوق محفوظة</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/user-common.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>

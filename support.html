@@ -3,73 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدعم - متجر الإلكتروني</title>
-    <link rel="stylesheet" href="style.css">
+    <title>الدعم الفني - شركة قيقا</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="https://cdn.discordapp.com/attachments/1218265466573950989/1325221421504401418/101.png?ex=677b0020&is=6779aea0&hm=2881902e38afea521172f489de46212e967f709e089bc2db8666e3595570945b&" alt="شعار المتجر">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="products.html">المنتجات</a></li>
-                <li><a href="support.html">الدعم</a></li>
-            </ul>
-        </nav>
+<body class="support-page">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span>قيقا</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="packages.html">باقات الإنترنت</a></li>
+            <li><a href="support.html" class="active">الدعم الفني</a></li>
+            <li class="user-menu">
+                <img src="images/default-avatar.png" alt="صورة المستخدم" class="user-avatar">
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> الملف الشخصي</a>
+                    <a href="balance.html"><i class="fas fa-wallet"></i> الرصيد</a>
+                    <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Support Header -->
+    <header class="hero">
+        <h1>الدعم الفني</h1>
+        <p>نحن هنا لمساعدتك</p>
     </header>
 
-    <main>
-        <section class="support-section">
-            <h1>الدعم والتواصل</h1>
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>اتصل بنا</h3>
-                    <p>+218 XX XXX XXXX</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-discord"></i>
-                    <h3>Discord</h3>
-                    <a href="https://discord.gg/cxtwKkB5Ss" target="_blank" class="discord-link">
-                        <p>انضم إلى مجتمعنا على Discord</p>
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>العنوان</h3>
-                    <p>🫡ليبيا👑</p>
-                </div>
+    <!-- Support Options -->
+    <section class="support-section">
+        <h2>كيف يمكننا مساعدتك؟</h2>
+        <div class="support-grid">
+            <div class="support-card">
+                <i class="fas fa-phone"></i>
+                <h3>اتصل بنا</h3>
+                <p>متوفرون على مدار الساعة</p>
+                <p>0911234567</p>
             </div>
-
-            <div class="contact-form">
-                <h2>نموذج التواصل</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">الاسم</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">الرسالة</label>
-                        <textarea id="message" required></textarea>
-                    </div>
-                    <button type="submit">إرسال</button>
-                </form>
+            <div class="support-card">
+                <i class="fas fa-envelope"></i>
+                <h3>راسلنا</h3>
+                <p>سنرد عليك خلال 24 ساعة</p>
+                <p>support@giga.ly</p>
             </div>
-        </section>
-    </main>
+            <div class="support-card">
+                <i class="fas fa-comments"></i>
+                <h3>الدردشة المباشرة</h3>
+                <p>تحدث مع أحد ممثلي خدمة العملاء</p>
+                <button class="btn">ابدأ الدردشة</button>
+            </div>
+        </div>
 
+        <!-- Contact Form -->
+        <h2>أرسل لنا رسالة</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">الاسم</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">الرسالة</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">إرسال</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>جميع الحقوق محفوظة Sohp MG 2025</p>
+            <div class="footer-section">
+                <h3>تواصل معنا <span class="glow-text">Ghazwan-MG</span></h3>
+                <p><i class="fas fa-phone"></i> 0911234567</p>
+                <p><i class="fas fa-envelope"></i> info@giga.ly</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 شركة قيقا لخدمات الإنترنت. جميع الحقوق محفوظة</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/user-common.js"></script>
 </body>
 </html>

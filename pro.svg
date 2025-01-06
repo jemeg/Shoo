@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .speed { font: bold 24px sans-serif; fill: #2d4966; }
+        .wave { fill: none; stroke: #f10f0f; stroke-width: 4; }
+    </style>
+    <circle cx="100" cy="100" r="90" fill="#f8f9fa" stroke="#f10f0f" stroke-width="4"/>
+    <path class="wave" d="M40,80 Q70,60 100,80 T160,80" />
+    <path class="wave" d="M40,100 Q70,80 100,100 T160,100" />
+    <path class="wave" d="M40,120 Q70,100 100,120 T160,120" />
+    <text x="100" y="90" class="speed" text-anchor="middle">15</text>
+    <text x="100" y="120" class="speed" text-anchor="middle">Mbps</text>
+</svg>

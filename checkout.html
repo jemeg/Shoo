@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الشراء - شركة قيقا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span>قيقا</span>
+        </div>
+            <div class="user-menu">
+                <img src="images/default-avatar.png" alt="" class="user-avatar">
+                <div class="dropdown-menu">
+                    <a href="profile.html">الملف الشخصي</a>
+                    <a href="balance.html">الرصيد</a>
+                    <a href="#" id="logoutBtn">تسجيل خروج</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="checkout-page">
+            <h2>إتمام عملية الشراء</h2>
+            
+            <div class="checkout-grid">
+                <!-- Product Summary -->
+                <div class="product-summary">
+                    <h3>تفاصيل المنتج</h3>
+                    <div class="product-info">
+                        <img id="productImage" src="" alt="" class="checkout-product-image">
+                        <div class="product-details">
+                            <h4 id="productName"></h4>
+                            <p id="productCode"></p>
+                            <p id="productBrand"></p>
+                            <p id="productCategory"></p>
+                        </div>
+                    </div>
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>سعر المنتج:</span>
+                            <span id="productPrice">$ 0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>السعر بالدينار:</span>
+                            <span id="priceInDinar">0.00 د.ل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <h3>تفاصيل الدفع</h3>
+                    <div class="balance-info">
+                        <div class="balance-row">
+                            <span>رصيدك الحالي:</span>
+                            <span id="currentBalance">0.00 د.ل</span>
+                        </div>
+                        <div class="balance-row">
+                            <span>المبلغ المطلوب:</span>
+                            <span id="requiredAmount">0.00 د.ل</span>
+                        </div>
+                        <div class="balance-row" id="remainingRow">
+                            <span>المبلغ المتبقي:</span>
+                            <span id="remainingAmount">0.00 د.ل</span>
+                        </div>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button id="confirmPurchaseBtn" class="btn">تأكيد الشراء</button>
+                        <button id="cancelPurchaseBtn" class="btn btn-secondary">إلغاء</button>
+                    </div>
+
+                    <div id="insufficientBalance" class="balance-warning" style="display: none;">
+                        <p>رصيدك غير كافٍ لإتمام عملية الشراء</p>
+                        <button onclick="window.location.href='balance.html'" class="btn">شحن الرصيد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 شركة قيقا لخدمات الإنترنت. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/user-common.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
